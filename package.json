@@ -1,0 +1,14 @@
+{
+  "name": "prueba-playwright",
+  "version": "1.0.0",
+  "description": "Proyecto Playwright - Primera prueba técnica",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "author": "Santiago Nicolás López",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
