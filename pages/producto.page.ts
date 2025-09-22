@@ -2,12 +2,18 @@ import { Page, Locator, expect } from '@playwright/test';
 
 //Clase para la pagina de producto
 export class ProductoPage {
+
   readonly page: Page;
   readonly locator: Locator;
 
   constructor(page: Page, locator: Locator) {
     this.page = page;
     this.locator = locator;
+  }
+
+  // traer informacion
+  locatorVisible(): Locator{
+    return this.locator;
   }
 
   //Metodo para obtener el nombre del producto
@@ -22,6 +28,7 @@ export class ProductoPage {
 
   //Metodo para agregar el producto al carrito
   async agregarAlCarrito(productId: string) {
+    
     const responsePromise = this.page.waitForResponse(
       (resp) =>
         resp.url().includes('wc-ajax=add_to_cart') &&

@@ -16,4 +16,8 @@ export class CategoriaPage {
   productoPorId(id: string): Locator {
     return this.page.locator(`.product-block[data-product-id="${id}"]`);
   }
+
+  locatorVisible(): Locator {
+    return this.page.locator('#menu-item-2806 a');
+  }
 }

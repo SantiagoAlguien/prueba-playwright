@@ -4,7 +4,9 @@
   "description": "Proyecto Playwright - Primera prueba técnica",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+      "test:amor": "npx playwright test tests/e2e/amor.spec.ts",
+      "test:cumple": "npx playwright test tests/e2e/cumple.spec.ts",
+      "report": "npx playwright show-report"
   },
   "author": "Santiago Nicolás López",
   "license": "ISC",

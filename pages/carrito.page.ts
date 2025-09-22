@@ -13,6 +13,10 @@ export class CarritoPage {
     this.page = page;
   }
 
+  locatorVisible() {
+    return this.page.locator('table.cart');
+  }
+
   filas() {
     return this.page.locator('table.cart tbody tr.cart_item');
   }
@@ -23,11 +27,11 @@ export class CarritoPage {
 
     const nombreCarrito1 = await filasCarrito.nth(0).locator('.product-name a').innerText();
     const precioCarrito1 = await filasCarrito.nth(0).locator('.product-price').innerText();
-    expect(nombreCarrito1).toBe(nombre1);
-    expect(precioCarrito1).toBe(precio1);
-
     const nombreCarrito2 = await filasCarrito.nth(1).locator('.product-name a').innerText();
     const precioCarrito2 = await filasCarrito.nth(1).locator('.product-price').innerText();
+    
+    expect(nombreCarrito1).toBe(nombre1);
+    expect(precioCarrito1).toBe(precio1);
     expect(nombreCarrito2).toBe(nombre2);
     expect(precioCarrito2).toBe(precio2);
 

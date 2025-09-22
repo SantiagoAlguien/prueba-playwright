@@ -8,6 +8,7 @@ export class HomePage {
     this.page = page;
   }
 
+  
   //Metodo para ir a la pagina de inicio
   async goto() {
     await this.page.goto('https://www.floristeriamundoflor.com/');
@@ -17,4 +18,9 @@ export class HomePage {
   async irCategoriaAmor() {
     await this.page.locator('#menu-item-2806 a').click();
   }
+
+  locatorVisible() {
+    return this.page.locator('#menu-item-2806 a'); // enlace Amor
+  }
+  
 }
